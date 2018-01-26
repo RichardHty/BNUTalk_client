@@ -1,0 +1,43 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bnutalk.ui"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/bk1"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.bnutalk.util.MyApplication">
+        <activity
+            android:name="com.bnutalk.ui.LanunchActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bnutalk.ui.MainActivity"></activity>
+        <activity android:name="com.bnutalk.ui.LoginActivity"></activity>
+        <activity android:name="com.bnutalk.ui.SignUpAcitivity"></activity>
+        <activity android:name="com.bnutalk.ui.SignUpPersInfoActivity"></activity>
+        <activity android:name="com.bnutalk.ui.RecentMsgListActivity"></activity>
+        <activity android:name="com.bnutalk.ui.ChatActivity"></activity>
+        <activity android:name="com.bnutalk.ui.ContactActivity"></activity>
+        <activity android:name="com.bnutalk.ui.AddContactsActivity"></activity>
+        <activity android:name="com.bnutalk.ui.SettingsAcitivity"></activity>
+        <activity android:name="com.bnutalk.ui.ContactInfoCardActivity"></activity>
+        <activity android:name="com.bnutalk.ui.SettingSelfCardActivity"></activity>
+        
+        <service android:name="com.bnutalk.server.UpdateContactService"></service>
+        <service android:name="com.bnutalk.server.MsgService"></service>
+        </application>
+</manifest>
